@@ -2,6 +2,11 @@
 
 All notable changes to Imprompter are recorded here. Dates are YYYY-MM-DD.
 
+## [Unreleased]
+
+### Changed
+- `README.md` opens with a hero banner and shows the four modes and a real REPLICATE run as images (`docs/images/`).
+
 ## [1.0.1] - 2026-11-26
 
 First live eval run: 10 of 10 checks pass (self-graded; GPT Image was not called, so regeneration quality is not tested). The run exposed four gaps in the instructions, closed here.
