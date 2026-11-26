@@ -81,6 +81,7 @@ When OpenAI ships a newer model, name it in your request and Imprompter will use
 - It writes prompts for GPT Image. Other generators can use the prompt text, but the SETTINGS line is GPT Image's.
 - It does not identify real people from their appearance, and it will not reproduce IDs, passports, currency or official documents.
 - Signatures and watermarks are left out unless the image is yours.
+- The [evals](evals/prompts.md) check output shape and rule-following. The latest run passed 10 of 10, graded by the same model that wrote the outputs, and GPT Image was not called, so how well a prompt regenerates its image is not measured.
 
 ## Package
 
@@ -90,7 +91,9 @@ imprompter/
 ├── README.md
 ├── LICENSE
 ├── CHANGELOG.md
-├── evals/prompts.md
+├── evals/prompts.md        # 10 behaviour checks
+├── evals/results-*.md      # latest run: 10/10 (self-graded)
+├── evals/fixtures/         # test images (left out of the release ZIP)
 ├── agents/openai.yaml
 └── assets/icon.svg
 ```

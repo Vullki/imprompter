@@ -2,6 +2,20 @@
 
 All notable changes to Imprompter are recorded here. Dates are YYYY-MM-DD.
 
+## [1.0.1] - 2026-11-26
+
+First live eval run: 10 of 10 checks pass (self-graded; GPT Image was not called, so regeneration quality is not tested). The run exposed four gaps in the instructions, closed here.
+
+### Changed
+- REPAIR now ends with a SETTINGS line carrying complexity and quality, so the edit prompt says how to run it.
+- HARVEST with a new subject now gives that prompt its own SETTINGS line.
+- Text cut off by the frame edge is transcribed with a note on where the edge cuts it, instead of being treated as unreadable.
+- A named model newer than SPEC: if there is no search tool or the search finds nothing, the limits are reported as unverified and SPEC values are used.
+
+### Added
+- `evals/results-2026-11-26.md` with every output and its grade, and `evals/fixtures/` with the test images and the HTML they were rendered from. The eval 8 portrait is a public-domain image from Wikimedia Commons.
+- The release ZIP leaves out `evals/fixtures/` to keep the installed skill small.
+
 ## [1.0.0] - 2026-11-26
 
 First public release.

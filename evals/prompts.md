@@ -1,6 +1,6 @@
 # Imprompter evals
 
-Ten behaviour checks. Run each with the skill installed and a real image attached. A pass means every "Expect" line holds. These have not been scored as a benchmark; they are the checks a release should survive.
+Ten behaviour checks. Run each with the skill installed and a real image attached. A pass means every "Expect" line holds. They are the checks a release should survive, not a benchmark. Latest run: 10 of 10 on 2026-11-26, self-graded, without calling GPT Image; see [`results-2026-11-26.md`](results-2026-11-26.md).
 
 ## 1. REPLICATE: poster with text
 **Input:** a printed gig poster with a headline, a date line and small print at the bottom.
