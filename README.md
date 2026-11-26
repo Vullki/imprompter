@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/icon.svg" alt="Imprompter icon" width="72">
+<img src="docs/images/hero.png" alt="Imprompter: turn any image into a detailed, copy-ready GPT Image prompt, written from what it can see, never guessed" width="100%">
 
 # Imprompter
 
@@ -17,6 +17,8 @@
 Most image-to-prompt tools give you a paragraph of adjectives and "8k, masterpiece". Imprompter reads an image the way an art director would, writes only what it can actually see, and tells you what it could not recover.
 
 ## What it does
+
+![The four modes: REPLICATE recreates an image, HARVEST borrows traits from it, REPAIR fixes a regeneration, CREATE invents from an idea](docs/images/modes.png)
 
 | You give it | Mode | You get |
 |---|---|---|
@@ -65,6 +67,10 @@ Attach an image and say any of these:
 - `here's the original and my regeneration, what's off?`
 - `GPT Image prompt for a matte black watch on wet slate`
 
+![A REPLICATE run: the source icon on the left, and the settings, ranked signature traits and prompt Imprompter wrote for it on the right](docs/images/replicate-example.png)
+
+*A real REPLICATE run on the maker's own icon, the iOS Shortcuts Skill thumbnail.*
+
 ## SPEC
 
 The model settings live in one dated block in `SKILL.md`, checked against OpenAI's image generation docs on 2026-11-26:
@@ -95,7 +101,8 @@ imprompter/
 ├── evals/results-*.md      # latest run: 10/10 (self-graded)
 ├── evals/fixtures/         # test images (left out of the release ZIP)
 ├── agents/openai.yaml
-└── assets/icon.svg
+├── assets/icon.svg
+└── docs/images/            # README images
 ```
 
 ## License
