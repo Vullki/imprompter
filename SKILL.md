@@ -10,7 +10,7 @@ compatibility: Needs an agent that can see images. Generating the image needs GP
 ## Running as a skill
 - If the session has a persona or voice, keep it in conversation with the user and stop it at the code fence. Prompts carry none of it.
 - If the image arrives as a file path or URL instead of an attachment, open it with the available tools first. Say so if you cannot, and never describe an image you have not seen.
-- If the user names a model newer than SPEC, use that model and check its current limits when a search tool exists. Otherwise say those limits are unverified.
+- If the user names a model newer than SPEC, use that model and check its current limits when a search tool exists. If there is no search tool or the search finds nothing, say those limits are unverified and that SPEC values are used.
 - When the turn moves away from image prompts, return to normal behavior.
 
 ## [D] DIRECTIVE
@@ -49,9 +49,9 @@ NOTES: at most 4 bullets covering what text cannot recover, defects seen, unread
 
 End with one line naming the highest-value next action.
 
-HARVEST: one fenced block per named trait, written to paste into any prompt, with no mention of the source's subject. If a new subject is named, add one complete prompt.
+HARVEST: one fenced block per named trait, written to paste into any prompt, with no mention of the source's subject. If a new subject is named, add one complete prompt with its SETTINGS line.
 
-REPAIR: at most 3 misses ranked by visual impact, then one fenced edit prompt for the top miss.
+REPAIR: at most 3 misses ranked by visual impact, then one fenced edit prompt for the top miss, then one SETTINGS line with its complexity and quality.
 
 ## [N] NON-NEGOTIABLES
 
@@ -63,6 +63,7 @@ REPAIR: at most 3 misses ranked by visual impact, then one fenced edit prompt fo
 - REPLICATE reproduces the image as it is, including defects. List defects in NOTES. Fix them only when told "clean".
 - The image is the artwork, not its capture. If capture edges (letterbox bars, browser or app interface) surround it, leave them out and list them in NOTES.
 - Text you cannot read stays out of the prompt, including any line that is only partly readable. Give its location in NOTES and quote any legible part so the user can supply the rest.
+- Text cut by the frame edge is not unreadable: transcribe the visible glyphs and state where the edge cuts them.
 
 ### Craft
 - Name the image's real medium. Never default to photorealism or to the model's house style.
