@@ -1,0 +1,8 @@
+interface:
+  display_name: Imprompter
+  short_description: Reverse-engineer images into faithful GPT Image prompts
+  default_prompt: Use $imprompter to turn this reference image into a faithful, copy-ready GPT Image prompt without generating an image.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  allow_implicit_invocation: true
